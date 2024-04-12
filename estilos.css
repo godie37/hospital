@@ -1,0 +1,109 @@
+.flex {
+    display: flex;
+}
+
+.caja-contenedora {
+    margin-top: 2%;
+    margin-left: 2%;
+    flex-direction: column;
+    width: 80%;
+    height: 40%;
+    border: 5px solid grey;
+    padding: 20px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size:contain;
+    
+}
+  
+.caja {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    margin: 5px;
+    text-align: center;
+    background-color:  rgba(38, 131, 252, 0.527);
+}
+  
+img {
+    margin-top: 5%;
+    width: 50%;
+    margin-bottom: -20%;
+}
+  
+.caja:hover{
+    background: linear-gradient(rgba(38, 131, 252, 0.527), rgb(34, 34, 238));
+    transition: all 1s;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.slider {
+    display: flex;
+    padding-right: 10%;
+    
+    animation: slide 10s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      background-image: url("./imagenes/descarga.jpeg");
+    }
+    33% {
+      background-image: url("./imagenes/descarga\ \(1\).jpeg");
+    }
+    66% {
+      background-image: url("./imagenes/descarga\ \(2\).jpeg");
+    }
+    100% {
+      background-image: url("./imagenes/descarga.jpeg");
+    }
+  }
+/*
+.caja-contenedora {
+  width: 500px;
+  height: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.slider {
+  display: flex;
+  padding-right: 10%;
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("./imagenes/descarga.jpeg");
+  }
+  33% {
+    background-image: url("./imagenes/descarga\ \(1\).jpeg");
+  }
+  66% {
+    background-image: url("./imagenes/descarga\ \(2\).jpeg");
+  }
+  100% {
+    background-image: url("./imagenes/descarga.jpeg");
+  }
+}
+
+
+.slider li {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+*/
