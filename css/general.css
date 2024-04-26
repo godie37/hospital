@@ -17,7 +17,30 @@ body {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.349);
 }
 .navbar {
-	padding-bottom: 0;
+	background: url("/img/hospital.jpg");
+	background-position: 47.8% 32.3%;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: flex-start;
+}
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar div {
+	padding-left: 3px;
+}
+.navbar div button {
+	padding: 7px;
+	border: solid 1px black;
+}
+.navbar-collapse {
+	margin: 5px 0;
+}
+.collapse ul {
+	margin-left: 5px;
+}
+.collapse ul li a {
+	padding: 5px;
 }
 .activo {
 	background-color: rgba(216, 216, 216, 0.685);
@@ -32,7 +55,6 @@ body {
 }
 
 .enlaces:hover {
-	color: white;
 	text-decoration: underline;
 	background-color: rgba(245, 245, 245, 0.507);
 }
@@ -46,16 +68,6 @@ body {
 .contenedor .estructura_contenido {
 	width: 100%;
 }
-/* .contenedor_gral {
-	background-color: white;
-	margin: 10px 0;
-	padding: 10px 0;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-o-border-radius: 15px;
-} */
 
 .pie_pagina {
 	background-color: #002b5b;
@@ -72,30 +84,35 @@ body {
 
 /* MQ */
 @media screen and (min-width: 575px) {
-	.encabezado {
-		padding: 0;
-		flex-direction: row;
-	}
-	.encabezado_fijo {
-		justify-content: end;
-		padding: 0 10px;
-	}
-
-	.contenedor_gral {
-		margin: 10px;
-		padding: 15px;
-	}
 	.pie_pagina p {
 		font-size: 1rem;
 	}
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 992px) {
 	.navbar {
 		padding-top: 0;
 	}
 	.enlaces {
-		margin: 0 15px;
+		margin: 0 5px;
+	}
+	.collapse ul li:first-child {
+		border-left: 1px solid black;
+	}
+
+	.collapse ul li {
+		border-right: 1px solid black;
+	}
+	.navbar {
+		padding: 0;
+		background-position: center 27.7%;
+		height: 130px;
+		align-items: start;
+	}
+	.navbar-collapse {
+		margin: 0;
+		display: flex;
+		justify-content: flex-start;
 	}
 }
 
@@ -104,27 +121,11 @@ body {
 	.contenedor {
 		padding: 0 25px;
 	}
-
-	.contenedor_gral {
-		padding: 20px;
-	}
-
-	.encabezado_fijo img {
-		width: 200px;
-	}
 }
 
 @media screen and (min-width: 1536px) {
 	/* .encabezado, */
 	.contenedor {
 		padding: 0 50px;
-	}
-	.tit_principal {
-		padding: 25px 0;
-		font-size: 3.3rem;
-	}
-	.contenedor_gral {
-		padding: 50px;
-		padding-top: 0px;
 	}
 }
