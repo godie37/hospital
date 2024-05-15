@@ -1,0 +1,171 @@
+.inputs {
+	display: flex;
+	flex-direction: column;
+	padding: 0 5px;
+}
+label {
+	font-weight: 700;
+}
+
+.tit_calendario {
+	font-size: 1.4rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.bloque_fecha {
+	background-color: cornsilk;
+	padding-bottom: 20px;
+}
+
+.dias_semana {
+	display: none;
+}
+
+.fechas {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.fecha_calendario:hover {
+	background-color: rgb(186, 205, 206);
+	cursor: pointer;
+	transition: all 0.7s ease-out;
+	transform: scale(1.04);
+	-webkit-transform: scale(1.04);
+	-moz-transform: scale(1.04);
+	-ms-transform: scale(1.04);
+	-o-transform: scale(1.04);
+	-webkit-transition: all 0.7s ease-out;
+	-moz-transition: all 0.7s ease-out;
+	-ms-transition: all 0.7s ease-out;
+	-o-transition: all 0.7s ease-out;
+}
+
+.fecha_calendario,
+.sinAtencion {
+	border-bottom: solid black 1px;
+	padding: 5px 10px;
+}
+
+.fecha_calendario:first-child,
+.sinAtencion:first-child {
+	border-top: solid black 1px;
+}
+
+.fecha_calendario {
+	display: grid;
+	grid-template-columns: 100px auto;
+}
+
+.sinAtencion {
+	background-color: darkgray;
+	display: flex;
+	justify-content: start;
+}
+.sinAtencion .dia_num {
+	width: 100px;
+}
+
+.dia_num {
+	order: 1;
+	font-weight: 700;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.msj_turno {
+	order: 2;
+	font-weight: 700;
+	text-align: center;
+}
+
+.calendario {
+	display: none;
+}
+
+@media screen and (min-width: 640px) {
+	.bloque_fecha {
+		margin-bottom: 10px;
+		padding: 5px 5px 15px 5px;
+	}
+	.inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 25px;
+	}
+	.fecha_calendario,
+	.sinAtencion {
+		height: 80px;
+		padding: 2px;
+	}
+	.tit_calendario {
+		font-size: 1.5rem;
+	}
+	.fechas,
+	.dias_semana {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-gap: 2px;
+	}
+	.dia_nombre {
+		display: none;
+	}
+
+	.dias_semana {
+		padding: 10px 0;
+		text-align: center;
+	}
+
+	.fecha_calendario {
+		display: flex;
+		flex-direction: column;
+		border: 2px solid black;
+		align-items: center;
+	}
+
+	.dias_semana span {
+		font-weight: 700;
+	}
+	.msj_turno {
+		padding: 2px;
+	}
+
+	.msj_turno,
+	.dia_num {
+		text-align: center;
+		font-size: 0.85rem;
+	}
+	.dia_num {
+		/* padding: 3px; */
+		font-size: 1.2rem;
+	}
+
+	.sinAtencion {
+		justify-content: center;
+	}
+	.sinAtencion .dia_num {
+		width: initial;
+		align-items: center;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.tit_calendario {
+		font-size: 1.8rem;
+	}
+	.fecha_calendario,
+	.sinAtencion {
+		height: 65px;
+	}
+
+	.fechas,
+	.dias_semana {
+		grid-gap: 5px;
+	}
+}
