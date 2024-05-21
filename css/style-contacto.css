@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    /*Background copiado de Ui Gradient*/
+    background: #3e5151;
+    background: -webkit-linear-gradient(
+      to right,
+      #decba4,
+      #3e5151
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #decba4,
+      #3e5151
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+.encabezado {
+  display: flex;
+  justify-content: center;
+}
+.navbar {
+  padding-bottom: 0;
+}
+.activo {
+  background-color: rgba(216, 216, 216, 0.685);
+}
+.enlaces {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #3e5151;
+}
+/*.navbar-collapse {
+	margin: 10px 0;
+}*/
+.enlaces:hover {
+  color: whitesmoke;
+}
+/*contenedor main*/
+.contenedor {
+  /*Background copiado de Ui Gradient*/
+  background: #3e5151;
+  background: -webkit-linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*direccion,telefono y correo electronico del hospital.*/
+.estructura_contenido {
+  /*div*/
+  display: flex;
+  justify-content: center;
+}
+/*Titulos de seccion y formulario de contacto*/
+.titulo {
+  /*Background copiado de Ui Gradient para los titulos*/
+  background: #3e5151;
+  background: -webkit-linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #decba4,
+    #3e5151
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+/*Seccion y Formulario de contacto.(usuario)*/
+.seccion-contacto, .formulario-contacto{
+  border-radius: 10px;
+  padding: 2%;
+  margin:1%;
+  background-color: #f5f2ebfa;
+  width: 500px;
+  justify-content: center;
+}
+/*atributos del formulario de contactos*/
+label,
+input,
+textarea,
+iframe {
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 10px;
+}
+/*Centrar boton de registro e ingreso*/
+.boton-enviar{
+  width: 20%;
+}
+p {
+  margin-left: 5%;
+}
+.pie_pagina {
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+/* Responsive para celulares.*/
+@media screen and (max-width: 575px) {
+  .encabezado {
+    display: flex;
+    justify-content: start;
+  }
+  .contenedor_gral {
+    margin: 10px;
+    padding: 15px;
+  }
+  .pie_pagina p {
+    font-size: 1rem;
+  }
+  .estructura_contenido {
+    flex-direction: column;
+  }
+  .contacto {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .seccion-contacto,
+  .formulario-contacto {
+    width: 90%;
+    margin: 5%;
+    border-radius: 10px;
+  }
+}
+
+/* MQ 
+@media screen and (min-width: 575px) {
+  .encabezado {
+    padding: 0;
+    flex-direction: row;
+  }
+  .encabezado_fijo {
+    justify-content: end;
+    padding: 0 10px;
+  }
+
+  .contenedor_gral {
+    margin: 10px;
+    padding: 15px;
+  }
+  .pie_pagina p {
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 993px) {
+    .navbar {
+      padding-top: 0;
+    }
+    .enlaces {
+      margin: 0 15px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    /* .encabezado, 
+
+    .contenedor_gral {
+      padding: 20px;
+    }
+
+    .encabezado_fijo img {
+      width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    /* .encabezado, 
+    .tit_principal {
+      padding: 25px 0;
+      font-size: 3.3rem;
+    }
+    .contenedor_gral {
+      padding: 50px;
+      padding-top: 0px;
+    }
+  }
+}
