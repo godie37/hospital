@@ -5,7 +5,7 @@
 		"especialidad": "Médico clínico",
 		"mp": "234234",
 		"diasAtencion": "['Lunes','Miercoles','Viernes']",
-		"horario": "[8:00,12:00]",
+		"horario": ["8:00", "12:00"],
 		"foto": ""
 	},
 	{
@@ -14,7 +14,7 @@
 		"especialidad": "Médica clínica",
 		"mp": "678256",
 		"diasAtencion": "['Martes','Jueves']",
-		"horario": "[8:00, 18:00]",
+		"horario": ["8:00", "18:00"],
 		"foto": ""
 	},
 	{
@@ -23,7 +23,7 @@
 		"especialidad": "Pediatría",
 		"mp": "6572456",
 		"diasAtencion": "['Miercoles','Jueves','Viernes']",
-		"horario": "[10:00, 15:00]",
+		"horario": ["10:00", "15:00"],
 		"foto": ""
 	},
 	{
@@ -32,7 +32,7 @@
 		"especialidad": "Cardiología Clínica",
 		"mp": "4574572",
 		"diasAtencion": "['Lunes','Miercoles']",
-		"horario": "[8:00,12:00]",
+		"horario": ["8:00", "12:00"],
 		"foto": ""
 	}
 ]

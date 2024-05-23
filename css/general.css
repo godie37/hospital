@@ -87,6 +87,12 @@ h1 {
 	margin: 0;
 }
 
+.error_form {
+	color: red;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
 /* MQ */
 @media screen and (min-width: 575px) {
 	.pie_pagina p {
