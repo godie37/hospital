@@ -1,3 +1,4 @@
+/*  BOOTSTRAP*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
 * {
@@ -5,6 +6,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	min-height: 100vh;
 	background-color: #f5f2ebfa;
@@ -12,53 +14,32 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: "Roboto", sans-serif;
-	font-family: "Roboto", sans-serif;
 }
-h1 {
-	font-weight: bold;
-	padding: 15px 0;
-	text-align: center;
-}
+
 .encabezado {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.349);
 }
-.navbar {
 
+.navbar {
 	display: flex;
-	justify-content: flex-start;
 }
-.navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-.navbar div {
-	padding-left: 3px;
-}
-.navbar div button {
-	padding: 7px;
-	border: solid 1px black;
-}
-.navbar-collapse {
-	margin: 5px 0;
-}
-.collapse ul {
-	margin-left: 5px;
-}
-.collapse ul li a {
-	padding: 5px;
-}
+
 .activo {
 	background-color: rgba(216, 216, 216, 0.685);
 }
+
 .enlaces {
 	font-weight: bold;
 	font-size: 1rem;
 	color: black;
 }
+
 .navbar-collapse {
 	margin: 10px 0;
 }
 
 .enlaces:hover {
+	color: white;
 	text-decoration: underline;
 	background-color: rgba(245, 245, 245, 0.507);
 }
@@ -74,6 +55,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 }
+
 .pie_pagina p {
 	color: white;
 	font-size: 0.75rem;
@@ -88,28 +70,53 @@ h1 {
 	margin-top: 5px;
 }
 
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar div {
+	padding-left: 3px;
+}
+
+.navbar div button {
+	padding: 7px;
+	border: solid 1px black;
+}
+
+.navbar-collapse {
+	margin: 5px 0;
+}
+
+.collapse ul {
+	margin-left: 5px;
+}
+
+.collapse ul li a {
+	padding: 5px;
+}
+
+
 /* ACTUALIDAD E HISTORIA */
 
-
-.bloque h1{
-	margin: 0px;
+h1 {
+	margin: 1%;
 	text-align: center;
 	font-size: 350%;
 }
 
-.bloque h2{
+.bloque h2 {
 	font-size: 200%;
 	margin: 1%;
 }
 
-.bloque p{
+.bloque p {
 	max-width: 1200px;
 	font-size: 120%;
 	text-align: justify;
 	margin: 1%;
 }
 
-.bloque.parallax{
+.bloque.parallax {
 	height: 800px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -117,18 +124,19 @@ h1 {
 	background-attachment: fixed;
 }
 
-.parallax.cover-1{
-	background-image: url(/img/cover-1.webp);
+.parallax.cover-1 {
+	background-image: url(../img/cover-1.webp);
 }
 
-.parallax.cover-2{
-	background-image: url(/img/cover-2.webp);
+.parallax.cover-2 {
+	background-image: url(../img/cover-2.webp);
 }
 
-.parallax.cover-3{
-	background-image: url(/img/cover-3.webp);
+.parallax.cover-3 {
+	background-image: url(../img/cover-3.webp);
 }
-.parallax.cover-4{
+
+.parallax.cover-4 {
 	background-image: url(../img/cover-4.webp);
 }
 
@@ -137,40 +145,55 @@ h1 {
 
 /* MQ */
 @media screen and (min-width: 575px) {
+	.encabezado {
+		padding: 0;
+		flex-direction: row;
+	}
+
+	.encabezado_fijo {
+		justify-content: end;
+		padding: 0 10px;
+	}
+
+	.contenedor_gral {
+		margin: 10px;
+		padding: 15px;
+	}
+
 	.pie_pagina p {
 		font-size: 1rem;
 	}
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 993px) {
 	.navbar {
 		padding-top: 0;
 	}
-	.enlaces {
-		margin: 0 5px;
-	}
-	.collapse ul li:first-child {
-		border-left: 1px solid black;
-	}
 
-	.collapse ul li {
-		border-right: 1px solid black;
-	}
-	.navbar {
-		padding: 0;
-		background-position: center 27.7%;
-		height: 130px;
-		align-items: start;
-	}
-	.navbar-collapse {
-		margin: 0;
-		display: flex;
-		justify-content: flex-start;
+	.enlaces {
+		margin: 0 15px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.contenedor {
-		padding: 0 20px;
+	.contenedor_gral {
+		padding: 20px;
+	}
+
+	.encabezado_fijo img {
+		width: 200px;
+	}
+}
+
+@media screen and (min-width: 1536px) {
+
+	.tit_principal {
+		padding: 25px 0;
+		font-size: 3.3rem;
+	}
+
+	.contenedor_gral {
+		padding: 50px;
+		padding-top: 0px;
 	}
 }
