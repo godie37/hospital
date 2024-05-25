@@ -85,10 +85,6 @@ body {
 	padding: 30px 20px;
 }
 
-h1 {
-	margin: 10px 10px;
-	text-align: center;
-}
 
 .box:hover {
 	opacity: 0.75;

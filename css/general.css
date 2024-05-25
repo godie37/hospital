@@ -6,7 +6,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body {
 	min-height: 100vh;
 	background-color: #f5f2ebfa;
@@ -15,25 +14,20 @@ body {
 	justify-content: space-between;
 	font-family: "Roboto", sans-serif;
 }
-
 .encabezado {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.349);
 }
-
 .navbar {
-	display: flex;
+	padding-bottom: 0;
 }
-
 .activo {
 	background-color: rgba(216, 216, 216, 0.685);
 }
-
 .enlaces {
 	font-weight: bold;
 	font-size: 1rem;
 	color: black;
 }
-
 .navbar-collapse {
 	margin: 10px 0;
 }
@@ -45,17 +39,23 @@ body {
 }
 
 .contenedor {
+	display: flex;
 	background-color: #f5f2ebfa;
-	margin: auto;
+	flex-grow: 1;
+	padding-bottom: 10px;
 }
-
-
+.contenedor .estructura_contenido {
+	width: 100%;
+}
+h1{
+	text-align: center;
+	margin: 10px 10px;
+}
 .pie_pagina {
 	background-color: #002b5b;
 	display: flex;
 	flex-direction: column;
 }
-
 .pie_pagina p {
 	color: white;
 	font-size: 0.75rem;
@@ -64,83 +64,45 @@ body {
 	margin: 0;
 }
 
-.error_form {
-	color: red;
-	font-weight: 700;
-	margin-top: 5px;
-}
-
-.navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.navbar div {
-	padding-left: 3px;
-}
-
-.navbar div button {
-	padding: 7px;
-	border: solid 1px black;
-}
-
-.navbar-collapse {
-	margin: 5px 0;
-}
-
-.collapse ul {
-	margin-left: 5px;
-}
-
-.collapse ul li a {
-	padding: 5px;
-}
-
 
 /* ACTUALIDAD E HISTORIA */
-
-h1 {
-	margin: 1%;
+.bloque h1{
+	margin: 0px;
 	text-align: center;
 	font-size: 350%;
 }
 
-.bloque h2 {
+.bloque h2{
 	font-size: 200%;
 	margin: 1%;
 }
-
-.bloque p {
+.bloque p{
 	max-width: 1200px;
 	font-size: 120%;
 	text-align: justify;
 	margin: 1%;
 }
-
-.bloque.parallax {
+.bloque.parallax{
 	height: 800px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
-
-.parallax.cover-1 {
+.parallax.cover-1{
 	background-image: url(../img/cover-1.webp);
 }
 
-.parallax.cover-2 {
+.parallax.cover-2{
 	background-image: url(../img/cover-2.webp);
 }
 
-.parallax.cover-3 {
+.parallax.cover-3{
 	background-image: url(../img/cover-3.webp);
 }
-
-.parallax.cover-4 {
+.parallax.cover-4{
 	background-image: url(../img/cover-4.webp);
 }
-
-
 
 
 /* MQ */
@@ -149,7 +111,6 @@ h1 {
 		padding: 0;
 		flex-direction: row;
 	}
-
 	.encabezado_fijo {
 		justify-content: end;
 		padding: 0 10px;
@@ -159,7 +120,6 @@ h1 {
 		margin: 10px;
 		padding: 15px;
 	}
-
 	.pie_pagina p {
 		font-size: 1rem;
 	}
@@ -169,13 +129,17 @@ h1 {
 	.navbar {
 		padding-top: 0;
 	}
-
 	.enlaces {
 		margin: 0 15px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
+	/* .encabezado, */
+	.contenedor {
+		padding: 0 25px;
+	}
+
 	.contenedor_gral {
 		padding: 20px;
 	}
@@ -186,12 +150,14 @@ h1 {
 }
 
 @media screen and (min-width: 1536px) {
-
+	/* .encabezado, */
+	.contenedor {
+		padding: 0 50px;
+	}
 	.tit_principal {
 		padding: 25px 0;
 		font-size: 3.3rem;
 	}
-
 	.contenedor_gral {
 		padding: 50px;
 		padding-top: 0px;
