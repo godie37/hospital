@@ -12,6 +12,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 h1 {
 	font-weight: bold;
@@ -22,9 +23,7 @@ h1 {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.349);
 }
 .navbar {
-	background: url("/img/hospital.jpg");
-	background-position: 47.8% 32.3%;
-	background-repeat: no-repeat;
+
 	display: flex;
 	justify-content: flex-start;
 }
@@ -65,14 +64,10 @@ h1 {
 }
 
 .contenedor {
-	display: flex;
 	background-color: #f5f2ebfa;
-	flex-grow: 1;
-	padding-bottom: 10px;
+	margin: auto;
 }
-.contenedor .estructura_contenido {
-	width: 100%;
-}
+
 
 .pie_pagina {
 	background-color: #002b5b;
@@ -92,6 +87,53 @@ h1 {
 	font-weight: 700;
 	margin-top: 5px;
 }
+
+/* ACTUALIDAD E HISTORIA */
+
+
+.bloque h1{
+	margin: 0px;
+	text-align: center;
+	font-size: 350%;
+}
+
+.bloque h2{
+	font-size: 200%;
+	margin: 1%;
+}
+
+.bloque p{
+	max-width: 1200px;
+	font-size: 120%;
+	text-align: justify;
+	margin: 1%;
+}
+
+.bloque.parallax{
+	height: 800px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.parallax.cover-1{
+	background-image: url(/img/cover-1.webp);
+}
+
+.parallax.cover-2{
+	background-image: url(/img/cover-2.webp);
+}
+
+.parallax.cover-3{
+	background-image: url(/img/cover-3.webp);
+}
+.parallax.cover-4{
+	background-image: url(../img/cover-4.webp);
+}
+
+
+
 
 /* MQ */
 @media screen and (min-width: 575px) {
