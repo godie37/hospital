@@ -1,62 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-    /*Background copiado de Ui Gradient*/
-    background: #3e5151;
-    background: -webkit-linear-gradient(
-      to right,
-      #decba4,
-      #3e5151
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #decba4,
-      #3e5151
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: flex;
-  flex-direction: column;
-  font-family: "Roboto", sans-serif;
-}
-.encabezado {
-  display: flex;
-  justify-content: center;
-}
-.navbar {
-  padding-bottom: 0;
-}
-.activo {
-  background-color: rgba(216, 216, 216, 0.685);
-}
-.enlaces {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #3e5151;
-}
-/*.navbar-collapse {
-	margin: 10px 0;
-}*/
-.enlaces:hover {
-  color: whitesmoke;
-}
+/* Seccion de contacto.*/
+/* #008DDA - #41C9E2 - #ACE2E1 - #F7EEDD */
 /*contenedor main*/
 .contenedor {
-  /*Background copiado de Ui Gradient*/
-  background: #3e5151;
-  background: -webkit-linear-gradient(
-    to right,
-    #decba4,
-    #3e5151
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #decba4,
-    #3e5151
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: grid;
 }
 /*direccion,telefono y correo electronico del hospital.*/
 .estructura_contenido {
@@ -66,19 +12,8 @@ body {
 }
 /*Titulos de seccion y formulario de contacto*/
 .titulo {
-  /*Background copiado de Ui Gradient para los titulos*/
-  background: #3e5151;
-  background: -webkit-linear-gradient(
-    to right,
-    #decba4,
-    #3e5151
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #decba4,
-    #3e5151
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: whitesmoke;
+  background-color:#f5f2ebfa;
+  color: #008DDA ;
   text-align: center;
   font-family: "Fjalla One", sans-serif;
   padding: 0.5rem;
@@ -86,6 +21,7 @@ body {
 }
 /*Seccion y Formulario de contacto.(usuario)*/
 .seccion-contacto, .formulario-contacto{
+  border: 1px solid grey;
   border-radius: 10px;
   padding: 2%;
   margin:1%;
@@ -109,19 +45,23 @@ iframe {
 p {
   margin-left: 5%;
 }
-.pie_pagina {
-  color: whitesmoke;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-}
 /* Responsive para celulares.*/
-@media screen and (max-width: 575px) {
-  .encabezado {
-    display: flex;
-    justify-content: start;
+@media screen and (max-width: 1024px) {
+.seccion-contacto, .formulario-contacto{
+  width: 45%;
+}
+}
+@media screen and (max-width: 850px) {
+  .seccion-contacto, .formulario-contacto{
+    width: 45%;
   }
+  }
+  @media screen and (max-width: 640px) {
+    .seccion-contacto, .formulario-contacto{
+      width: 45%;
+    }
+    }
+@media screen and (max-width: 575px) {
   .contenedor_gral {
     margin: 10px;
     padding: 15px;
@@ -170,7 +110,7 @@ p {
     .enlaces {
       margin: 0 15px;
     }
-  }
+}
 
   @media screen and (min-width: 1024px) {
     /* .encabezado, 

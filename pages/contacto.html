@@ -17,6 +17,8 @@
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+      <!-- CSS General -->
+	    <link rel="stylesheet" href="/css/general.css" />
       <link rel="stylesheet" href="../css/style-contacto.css" />
   </head>
   <body>
@@ -28,7 +30,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end bg-transparent" id="navbarNavDropdown">
+            class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
 
             <ul class="navbar-nav text-center nav-pills">
 
@@ -82,22 +84,22 @@
 
       <p>(Completa el formulario, dejanos tu mensaje y nos contactaremos contigo.)</p><br>
     
-   
+  
 
     <label for="nombre"><strong>Usuario</strong></label>
-		<input type="text" id="nombre" name="nombre" required/><br>
+		<input type="text" id="nombre" name="nombre" placeholder=" Ej: Pepe Argento" required/><br>
 
 		
 		<label for="email"><strong>E-mail</strong></label>
-		<input type="email" id="email" name="email" required/><br>
+		<input type="email" id="email" name="email" placeholder=" Ej: PepeArgento@gmail.com" required/><br>
 		
 		<label for="celular"><strong>Celular</strong></label>
-		<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="celular" name="celular" required/><br>
+		<input type="tel" id="celular" name="celular"  pattern="[0-9]{10}" placeholder=" Ej: (3735) 123456" required/><br>
 
-    <label for="comentario">dejanos un comentario</label>
-		<textarea id="comentario" name="comentario" rows="8" cols="50" required></textarea><br> 
+    <label for="comentario"></label>
+		<textarea id="comentario" name="comentario" rows="8" cols="50" placeholder=" Dejanos un comentario" required></textarea><br> 
 
-		<input class="boton-enviar" type="submit" value="Enviar" />
+		<input id="enviar" class="boton-enviar" type="submit" value="Enviar" />
 </form>
 
 	  </div>
@@ -121,5 +123,6 @@
     ></script>
 
     <!-- JS -->
+    <script src="/js/contacto.js" type="module"></script>
   </body>
 </html>
