@@ -15,6 +15,7 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 .encabezado {
+	background-color: ACE2E1;;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.349);
 }
 .navbar {
@@ -52,12 +53,12 @@ h1{
 	margin: 10px 10px;
 }
 .pie_pagina {
-	background-color: #002b5b;
+	background-color: #ACE2E1;
 	display: flex;
 	flex-direction: column;
 }
 .pie_pagina p {
-	color: white;
+	color: rgb(63, 61, 61);
 	font-size: 0.75rem;
 	padding: 5px 0;
 	text-align: center;
