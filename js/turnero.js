@@ -1,6 +1,10 @@
 import { validacionBlur } from "./validaciones.js";
 let selectListaMedicos = document.getElementById("listaMedico");
 let inputMes = document.getElementById("mes");
+let bloque_fecha = document.getElementById("bloque_fecha");
+let dias = document.getElementById("dias_semana");
+let fechas = document.getElementById("fechas");
+let calendario = document.getElementById("calendario");
 let listaMedicos = [];
 let medicoSeleccionado = null;
 let fechaSeleccionada = null;
@@ -60,7 +64,6 @@ inputMes.addEventListener("change", (e) => {
 
 // Muestro el calendario si se seleccionó el médico y el mes, sino queda oculto
 function mostrarCalendario() {
-	let calendario = document.getElementById("calendario");
 	calendario.style.display = "flex";
 	calendario.style.flexDirection = "column";
 	calendario.style.marginBottom = "10px";
@@ -127,6 +130,9 @@ function solicitarTurno() {
 		diasConAtencion[i].addEventListener("click", async (e) => {
 			e.preventDefault();
 
+			let msj_fecha = ''
+			let tit_calendario = document.querySelector('.tit_calendario')
+
 			generarFormularioTurnero()
 
 			// Habilito campo file solo en el caso de ser requerido
@@ -153,6 +159,10 @@ function solicitarTurno() {
 			let horarioAtencion = medicoSeleccionado.horario;
 			let rangoHorario = listarHorarios(anio, mes, dia, horarioAtencion);
 
+
+
+			tit_calendario.innerHTML = 'Turno para el ' + SEMANA[new Date(anio, mes - 1, dia).getDay()] + ' ' + dia + ' '
+
 			// Creo el select e ingreso los valores
 			let select_horario = document.getElementById("horario");
 			rangoHorario.forEach((horario) => {
@@ -163,10 +173,17 @@ function solicitarTurno() {
 			});
 			//
 
+			let form = document.querySelector('.form_turno')
 			let btn_volver = document.getElementById("btn_volver");
 			btn_volver.addEventListener("click", (e) => {
 				e.preventDefault();
-				resetearFormulario(bloque_fecha, form_turno, dias, fechas);
+				bloque_fecha.style.backgroundColor = "cornsilk";
+				dias.removeAttribute("style");
+				fechas.removeAttribute("style");
+				bloque_fecha.removeChild(form);
+				selectListaMedicos.removeAttribute("disabled");
+				inputMes.removeAttribute("disabled");
+				tit_calendario.innerHTML = 'Seleccionar día'
 				// bloque_fecha.removeChild(fecha_turno);
 			});
 
@@ -270,7 +287,13 @@ function solicitarTurno() {
 							// Reseteo los campos del formularo, además restablezco la vista, oculto el formulario y muestro el calendario. El tiempo establecido va de la mano de la duración de la alerta de SweetAlert
 							campos_form.reset();
 							setTimeout(() => {
-								resetearFormulario(bloque_fecha, form_turno, dias, fechas);
+								bloque_fecha.style.backgroundColor = "cornsilk";
+								dias.removeAttribute("style");
+								fechas.removeAttribute("style");
+								bloque_fecha.removeChild(form);
+								selectListaMedicos.removeAttribute("disabled");
+								inputMes.removeAttribute("disabled");
+								tit_calendario.innerHTML = 'Seleccionar día'
 							}, 1200);
 						}
 					});
@@ -282,9 +305,6 @@ function solicitarTurno() {
 
 // Genero el formulario para solicitar el turno
 function generarFormularioTurnero() {
-	let bloque_fecha = document.getElementById("bloque_fecha");
-	let dias = document.getElementById("dias_semana");
-	let fechas = document.getElementById("fechas");
 	dias.style.display = "none";
 	fechas.style.display = "none";
 	bloque_fecha.style.backgroundColor = "rgb(224, 219, 198)";
@@ -320,10 +340,10 @@ function generarFormularioTurnero() {
 			<section class="caja_inputs radio_turno">
 				<label for="derivacion">Es con derivación?</label>
 				<div class="bloque_radio">
-					<label for="sin_derivacion">Sin derivación
+					<label>Sin derivación
 						<input class='form-radio-input sin_derivacion' type="radio" name="derivacion" id="derivacion" value='No' data-validacion='[]' checked/>
 					</label>
-					<label for="con_derivacion">Con derivación
+					<label>Con derivación
 						<input class='form-radio-input con_derivacion' type="radio" name="derivacion" id="derivacion" value='Si' data-validacion='[]'/>
 					</label>
 				</div>
@@ -362,7 +382,7 @@ function listarHorarios(anio, mes, dia, horarioAtencion) {
 		let hora = horaActual.getHours();
 		let minutos = horaActual.getMinutes();
 
-		rangoHorario.push(hora + ":" + (minutos.toString().length == 1 ? minutos + "0" : minutos));
+		rangoHorario.push((hora.toString().length == 1 ? "0" + hora : hora) + ":" + (minutos.toString().length == 1 ? minutos + "0" : minutos));
 		horaActual = contador(horaActual);
 	}
 
@@ -370,19 +390,23 @@ function listarHorarios(anio, mes, dia, horarioAtencion) {
 	let turnos = JSON.parse(localStorage.getItem(medicoSeleccionado.id));
 	let horariosAsignados = [];
 
-	turnos.forEach((turnosAsignadas) => {
-		if (turnosAsignadas.fecha_turno == (dia.toString().length == 1 ? "0" + dia : dia) + "/" + mes + "/" + anio) {
-			horariosAsignados = turnosAsignadas.turno;
-		}
-	});
-
-	horariosAsignados.forEach((turno) => {
-		rangoHorario.find((franjaHoraria, key) => {
-			if (franjaHoraria == turno.horario_turno) {
-				rangoHorario.splice(key, 1)
+	if (turnos != null) {
+		turnos.forEach((turnosAsignadas) => {
+			if (turnosAsignadas.fecha_turno == (dia.toString().length == 1 ? "0" + dia : dia) + "/" + mes + "/" + anio) {
+				horariosAsignados = turnosAsignadas.turno;
 			}
-		})
-	});
+		});
+	}
+
+	if (horariosAsignados.length > 0) {
+		horariosAsignados.forEach((turno) => {
+			rangoHorario.find((franjaHoraria, key) => {
+				if (franjaHoraria == turno.horario_turno) {
+					rangoHorario.splice(key, 1)
+				}
+			})
+		});
+	}
 
 	return rangoHorario;
 }
@@ -394,17 +418,5 @@ function contador(horaActual) {
 	horaActual.setMinutes(min + sumarMinutos);
 	return horaActual;
 }
-
-// Oculto campos formulario y vuelvo a mostar el calendario
-function resetearFormulario(fondo_form, campos_form, dias, fechas) {
-	fondo_form.style.backgroundColor = "cornsilk";
-	dias.removeAttribute("style");
-	fechas.removeAttribute("style");
-	fondo_form.removeChild(campos_form);
-	selectListaMedicos.removeAttribute("disabled");
-	inputMes.removeAttribute("disabled");
-}
-
-
 
 // Ver si se puede agregar la fecha en el formulario de solicitud de turno, para que quede claro para que día es el turno

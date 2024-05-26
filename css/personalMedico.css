@@ -1,24 +1,83 @@
-/*  PERSONAL MEDICO */
-.box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
-    gap: 15px;
-	margin: 30px 10px;
-}
-.box{
-    box-shadow: 0 3px 5px;
-    border-radius: 5px;
-    background: #fff;
-    text-align: center;
-    padding: 30px 20px;
-}
-img{
-    height: 130px;
-}
+	/*  PERSONAL MEDICO */
+	.bloque_personal {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
 
-h3{
-    color:#444;
-    font-size: 22px;
-    padding:10px 0;
-	margin-left: 10px;
-}
+	.card_personal {
+		box-shadow: 0 3px 5px;
+		border-radius: 5px;
+		background: #fff;
+		text-align: center;
+		margin: auto;
+		align-items: center;
+		width: 95%;
+		display: flex;
+		flex-direction: column;
+		padding: 15px 0;
+	}
+
+	.img_personal {
+		width: 100px;
+		padding-bottom: 5px;
+	}
+
+	.nombre_personal,
+	.especialidad_personal,
+	.matricula_personal {
+		margin: 0;
+		padding: 2px 0;
+	}
+
+	.nombre_personal {
+		font-size: 1.2rem;
+	}
+
+	.especialidad_personal {
+		font-size: 1.1rem;
+	}
+
+	.matricula_personal {
+		font-size: 1rem;
+	}
+
+
+	@media screen and (min-width: 575px) {
+		.bloque_personal {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2px;
+			row-gap: 20px;
+		}
+
+		.card_personal {
+			height: 100%;
+		}
+
+		.img_personal {
+			padding: 15px 0;
+		}
+
+		.nombre_personal {
+			font-size: 1.3rem;
+			padding: 0 5px;
+		}
+
+		.especialidad_personal {
+			font-size: 1.2rem;
+		}
+
+		.matricula_personal {
+			font-size: 1.1rem;
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		.bloque_personal {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			/* column-gap: 2px; */
+			/* row-gap: 10px; */
+		}
+	}
