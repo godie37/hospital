@@ -2,24 +2,22 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CAPS - Hospital Eustaquio Aristizabal</title>
 
 	<!-- BOOTSTRAP -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-
-	<!-- CSS General -->
-	<link rel="stylesheet" href="../css/general.css" />
-
-	<!--    CSS - CAPS-->
-	<link rel="stylesheet" href="../css/caps.css">
+	  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	<!-- FAVICON -->
-	<link rel="icon" href="../img/favicon32x32.ico" type="image/x-icon">
+	<link rel="icon" href="/img/icono_navegador.ico" type="image/x-icon">
 
+	<!-- CSS General -->
+	<link rel="stylesheet" href="/css/general.css">
+	<!--    CSS - CAPS-->
+	<link rel="stylesheet" href="../css/caps.css">
 </head>
 
 <body>
@@ -27,31 +25,30 @@
 	<header class="encabezado">
 		<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
 			<div class="container-fluid bg-transparent">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
 					<ul class="navbar-nav text-center nav-pills">
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase activo" aria-current="page"
-								href="/index.html">Inicio</a>
+							<a class="nav-link enlaces text-uppercase" aria-current="page" href="../index.html"><box-icon name='home-alt-2'></box-icon> Inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/caps.html">CAPS</a>
+							<a class="nav-link enlaces text-uppercase activo" href="/pages/caps.html"><box-icon type='solid'
+								  name='institution'></box-icon> CAPS</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/turnero.html">Sacar turno</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/turnero.html"><box-icon name='receipt'></box-icon> Sacar turno</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/agenda.html">Agenda turnos</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/agenda.html"><box-icon name='book-content'></box-icon> Agenda turnos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/personal.html">Personal Médico</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/personal.html"><box-icon name='universal-access'></box-icon> Personal Médico</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/contacto.html">Contacto</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/contacto.html"><box-icon name='message-dots'></box-icon> Contacto</a>
 						</li>
 					</ul>
 				</div>
@@ -61,52 +58,48 @@
 
 	<main class="contenedor">
 		<section class="estructura_contenido">
+			<h1>Centros de Atención Primaria de Salud</h1>
 			<!-- CAPS MAPAS-->
-			<h1>Centros de Atencio Primaria de Salud</h1>
-			<div class="box-container">
-				<div class="box">
+			<article class="box-container card">
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Gral. Piran</h2>
 					<p>Dirección: Falucho N° 153</p>
 					<h3>Teléfono: 02265-49-1067</h3>
-				</div>
-				<div class="box">
+				</section>
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Mar de Cobo</h2>
 					<p>Dirección: De la Merced N° 423</p>
 					<h3>Teléfono: 0223-584-4358</h3>
-				</div>
-				<div class="box">
+				</section>
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Balneario Mar Chiquita</h2>
 					<p>Dirección: Fernando Soler N° 1424</p>
 					<h3>Teléfono: 0223-469-1069</h3>
-				</div>
-				<div class="box">
+				</section>
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Santa Clara del Mar</h2>
 					<p>Dirección: Punta Lara N° 408</p>
 					<h3>Teléfono: 0223-460-2338 – 223-469-3742</h3>
-				</div>
-
-				<div class="box">
+				</section>
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Santa Elena</h2>
 					<p>Dirección: Pedro de Mendoza N° 192</p>
 					<h3>Teléfono: 0223-469-3390</h3>
-				</div>
-				<div class="box">
+				</section>
+				<section class="bloque_caps">
 					<h2>C.A.P.S. - Vivorata</h2>
 					<p>Dirección: La Posta N° 56</p>
 					<h3>Teléfono: 02265-492011</h3>
-				</div>
-			</div>
-			<div class="map">
-				<div>
-					<iframe
-						src="https://www.google.com/maps/d/embed?mid=1nUfHfow3wCMsg1qCiLb2WU5PXdNY9W0&hl=es&ehbc=2E312F"
-						width="100%" height="500px"></iframe>
-				</div>
-			</div>
+				</section>
+			</article>
+			<article class="map">
+				<iframe src="https://www.google.com/maps/d/embed?mid=1nUfHfow3wCMsg1qCiLb2WU5PXdNY9W0&hl=es&ehbc=2E312F"
+				  width="100%" height="500px"></iframe>
+			</article>
 		</section>
 	</main>
 	<footer class="pie_pagina">
-		<p>NodeJS &copy Codo a Codo 2024</p>
+		<p>NodeJS || Grupo 2 - Codo a Codo 2024</p>
 	</footer>
 
 	<!-- ICONOS -->
@@ -117,8 +110,8 @@
 
 	<!-- BOOTSTRAP -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
+	  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	  crossorigin="anonymous"></script>
 
 	<!-- JS -->
 </body>

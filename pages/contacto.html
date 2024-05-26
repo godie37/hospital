@@ -2,21 +2,21 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Hospital Eustaquio Aristizabal</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="/img/icono_navegador.ico" type="image/x-icon">
 
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <!-- CSS General -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Outfit:wght@100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../css/style-contacto.css" />
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="../css/style-contacto.css">
 </head>
 
 <body>
@@ -27,84 +27,96 @@
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end bg-transparent" id="navbarNavDropdown">
-
+        <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
           <ul class="navbar-nav text-center nav-pills">
-						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase activo" aria-current="page"
-								href="/index.html">Inicio</a>
+            <li class="nav-item">
+							<a class="nav-link enlaces text-uppercase" aria-current="page" href="../index.html"><box-icon name='home-alt-2'></box-icon> Inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/caps.html">CAPS</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/caps.html"><box-icon type='solid'
+								  name='institution'></box-icon> CAPS</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/turnero.html">Sacar turno</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/turnero.html"><box-icon name='receipt'></box-icon> Sacar turno</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/agenda.html">Agenda turnos</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/agenda.html"><box-icon name='book-content'></box-icon> Agenda turnos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/personal.html">Personal Médico</a>
+							<a class="nav-link enlaces text-uppercase" href="/pages/personal.html"><box-icon name='universal-access'></box-icon> Personal Médico</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link enlaces text-uppercase" href="./pages/contacto.html">Contacto</a>
+							<a class="nav-link enlaces text-uppercase activo" href="/pages/contacto.html"><box-icon name='message-dots'></box-icon> Contacto</a>
 						</li>
-					</ul>
+          </ul>
         </div>
       </div>
     </nav>
   </header>
+
   <!--Datos de contacto del Hospital-->
   <main class="contenedor">
-    <h1 class="titulo">CONTACTO</h1>
+    <section class="estructura_contenido">
 
-    <div class="estructura_contenido">
-      <section class="seccion-contacto">
+      <h1>Contacto</h1>
 
-        <h3 class="titulo">Contacta con nosotros</h3>
-        <p>
-          <strong>Dirección:</strong> Hospital Eustaquio Aristizábal, Coronel Vidal, Provincia de Buenos Aires
-        </p>
-        <p>
-          <strong>Teléfono:</strong> (022) 65432332
-        </p>
-        <p>
-          <strong>Correo electrónico:</strong> info@hospitallaureles.com.ar
-        </p>
-        <!--Google Maps-->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d791.871578727193!2d-57.731282230362886!3d-37.44923813356138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959ae14c6b83e50f%3A0xceb88a71527c5e5a!2sHospital%20Eustaquio%20Aristiz%C3%A1bal!5e0!3m2!1ses!2sar!4v1713820251633!5m2!1ses!2sar"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+      <article class="contenedor_contacto">
+        <section class="seccion-contacto">
+          <h3 class="titulo_contactate">Contacta con nosotros</h3>
+          <div class="bloque_contactate">
+            <p>
+              <strong>Dirección:</strong> Hospital Eustaquio Aristizábal, Coronel Vidal, Provincia de Buenos Aires
+            </p>
+            <p>
+              <strong>Teléfono:</strong> (022) 65432332
+            </p>
+            <p>
+              <strong>Correo electrónico:</strong> info@hospitallaureles.com.ar
+            </p>
+          </div>
+          <!--Google Maps-->
+          <div class="bloque_mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d791.871578727193!2d-57.731282230362886!3d-37.44923813356138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959ae14c6b83e50f%3A0xceb88a71527c5e5a!2sHospital%20Eustaquio%20Aristiz%C3%A1bal!5e0!3m2!1ses!2sar!4v1713820251633!5m2!1ses!2sar"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa_contactate">
+            </iframe>
+          </div>
+        </section>
+        <!--Rellenar Formulario por el usuario-->
+        <form class="formulario-contacto">
 
-        </iframe>
-      </section>
-      <!--Rellenar Formulario por el usuario-->
-      <form class="formulario-contacto">
+          <h3 class="titulo_contactate">Envíanos un mensaje</h3>
+          <div class="bloque_contacto">
+            <p>(Completa el formulario, dejanos tu mensaje y nos contactaremos contigo.)</p>
+          </div>
 
-        <h3 class="titulo">Envíanos un mensaje</h3><br>
+          <div class="bloque_form_contacto">
+            <div class="bloque_inputs">
+              <label for="nombre">Usuario</label>
+              <input type="text" id="nombre" name="nombre" placeholder=" Ej: Pepe Argento" class="form-control">
+            </div>
+            <div class="bloque_inputs">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder=" Ej: PepeArgento@gmail.com"
+                class="form-control">
+            </div>
+            <div class="bloque_inputs">
+              <label for="celular">Celular</label>
+              <input type="tel" id="celular" name="celular" placeholder=" Ej: 3735123456" class="form-control">
+            </div>
+            <div class="bloque_inputs">
+              <label for="comentario">Ingese un comentario</label>
+              <textarea id="comentario" name="comentario" rows="8" cols="50" placeholder=" Dejanos un comentario"
+                class="form-control"></textarea>
+            </div>
+            <div class="btn_contacto">
+              <button id="enviar" class="boton-enviar">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </article>
 
-        <p>(Completa el formulario, dejanos tu mensaje y nos contactaremos contigo.)</p><br>
-
-
-
-        <label for="nombre"><strong>Usuario</strong></label>
-        <input type="text" id="nombre" name="nombre" required /><br>
-
-
-        <label for="email"><strong>E-mail</strong></label>
-        <input type="email" id="email" name="email" required /><br>
-
-        <label for="celular"><strong>Celular</strong></label>
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="celular" name="celular" required /><br>
-
-        <label for="comentario">dejanos un comentario</label>
-        <textarea id="comentario" name="comentario" rows="8" cols="50" required></textarea><br>
-
-        <input class="boton-enviar" type="submit" value="Enviar" />
-      </form>
-
-    </div>
+    </section>
   </main>
   <!--pie de pagina (Footer)-->
   <footer class="pie_pagina">
@@ -123,6 +135,7 @@
     crossorigin="anonymous"></script>
 
   <!-- JS -->
+  <script src="/js/contacto.js" type="module"></script>
 </body>
 
 </html>
